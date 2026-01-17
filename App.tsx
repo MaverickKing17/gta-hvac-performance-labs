@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import About from './components/About';
 import ChatWidget from './components/ChatWidget';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         image={heroImage}
         onUpdate={handleHeroUpdate}
       />
+      <WhyChooseUs />
       <Services />
       <About />
       <Footer />
