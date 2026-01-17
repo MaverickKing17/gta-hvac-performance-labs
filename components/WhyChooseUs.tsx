@@ -21,6 +21,14 @@ const WhyChooseUs: React.FC = () => {
     },
   ];
 
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="reviews" className="bg-royal-900 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +65,11 @@ const WhyChooseUs: React.FC = () => {
 
         {/* Call to Action specific to this section */}
         <div className="mt-16 text-center">
-          <a href="#contact" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-royal-900 bg-white hover:bg-royal-50 transition-colors shadow-lg hover:shadow-xl">
+          <a 
+            href="#contact" 
+            onClick={scrollToContact}
+            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-royal-900 bg-white hover:bg-royal-50 transition-colors shadow-lg hover:shadow-xl cursor-pointer"
+          >
             Schedule Your Service Today
           </a>
         </div>

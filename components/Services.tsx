@@ -29,6 +29,14 @@ const services = [
 ];
 
 const Services: React.FC = () => {
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-royal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +63,7 @@ const Services: React.FC = () => {
               </div>
               <div className="mt-8">
                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-royal-600 transition-colors">
-                  <a href="#contact" className="focus:outline-none">
+                  <a href="#contact" onClick={scrollToContact} className="focus:outline-none cursor-pointer">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {service.title}
                   </a>

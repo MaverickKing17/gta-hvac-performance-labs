@@ -16,6 +16,14 @@ const Hero: React.FC<HeroProps> = ({ headline, subheadline, image, onUpdate }) =
   // Default fallback image if none provided
   const bgImage = image || "https://picsum.photos/800/800?random=1";
 
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleRemixText = async () => {
     setIsRegeneratingText(true);
     const newHeadline = await generateMarketingCopy(headline, "Make it urgent but friendly, focusing on heating repair in Brampton.");
@@ -86,7 +94,8 @@ const Hero: React.FC<HeroProps> = ({ headline, subheadline, image, onUpdate }) =
                 <div className="rounded-md shadow">
                   <a
                     href="#contact"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-royal-600 hover:bg-royal-700 md:py-4 md:text-lg md:px-10 transition-all"
+                    onClick={scrollToContact}
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-royal-600 hover:bg-royal-700 md:py-4 md:text-lg md:px-10 transition-all cursor-pointer"
                   >
                     Book Diagnosis
                     <ArrowRight className="ml-2" size={20}/>
@@ -95,7 +104,8 @@ const Hero: React.FC<HeroProps> = ({ headline, subheadline, image, onUpdate }) =
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#contact"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-royal-700 bg-royal-100 hover:bg-royal-200 md:py-4 md:text-lg md:px-10 transition-all"
+                    onClick={scrollToContact}
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-royal-700 bg-royal-100 hover:bg-royal-200 md:py-4 md:text-lg md:px-10 transition-all cursor-pointer"
                   >
                     <Calendar className="mr-2" size={20}/>
                     Check Availability

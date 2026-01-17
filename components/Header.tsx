@@ -4,13 +4,27 @@ import { Phone, Menu, X, ThermometerSnowflake } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md border-b border-royal-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+          <a href="#" onClick={scrollToTop} className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
             <div className="w-10 h-10 bg-royal-600 rounded-lg flex items-center justify-center text-white group-hover:bg-royal-700 transition-colors">
               <ThermometerSnowflake size={24} />
             </div>
@@ -22,9 +36,9 @@ const Header: React.FC = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center">
-            <a href="#services" className="text-gray-600 hover:text-royal-600 font-medium transition-colors">Services</a>
-            <a href="#about" className="text-gray-600 hover:text-royal-600 font-medium transition-colors">About Brendon</a>
-            <a href="#reviews" className="text-gray-600 hover:text-royal-600 font-medium transition-colors">Reviews</a>
+            <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="text-gray-600 hover:text-royal-600 font-medium transition-colors">Services</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="text-gray-600 hover:text-royal-600 font-medium transition-colors">About Brendon</a>
+            <a href="#reviews" onClick={(e) => scrollToSection(e, 'reviews')} className="text-gray-600 hover:text-royal-600 font-medium transition-colors">Reviews</a>
             <a 
               href="tel:+19055550123" 
               className="bg-royal-600 text-white px-6 py-2.5 rounded-full font-bold flex items-center gap-2 hover:bg-royal-700 transition-all shadow-lg hover:shadow-royal-200"
@@ -50,9 +64,9 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
           <div className="px-4 pt-2 pb-6 space-y-2">
-            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">Services</a>
-            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">About Brendon</a>
-            <a href="#reviews" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">Reviews</a>
+            <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">Services</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">About Brendon</a>
+            <a href="#reviews" onClick={(e) => scrollToSection(e, 'reviews')} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-royal-600 hover:bg-royal-50 rounded-md">Reviews</a>
             <a href="tel:+19055550123" className="block px-3 py-3 text-base font-bold text-royal-600 bg-royal-50 rounded-md">
               Call Now: (905) 555-0123
             </a>
