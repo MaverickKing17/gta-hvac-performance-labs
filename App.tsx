@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import About from './components/About';
+import Contact from './components/Contact';
 import ChatWidget from './components/ChatWidget';
 import Footer from './components/Footer';
 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
       <WhyChooseUs />
       <Services />
       <About />
+      <Contact />
       <Footer />
       <ChatWidget />
     </div>
