@@ -41,7 +41,7 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 bg-royal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-base text-royal-600 font-semibold tracking-wide uppercase">Our Expertise</h2>
+          <h2 className="text-base text-royal-600 font-semibold tracking-wide uppercase animate-pulse">Our Expertise</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Complete Heating Solutions
           </p>
@@ -54,10 +54,10 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-royal-500 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 ${service.highlight ? 'border-2 border-royal-200' : 'border border-gray-100'}`}
+              className={`relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-royal-500 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${service.highlight ? 'border-2 border-royal-200' : 'border border-gray-100'}`}
             >
               <div>
-                <span className={`rounded-lg inline-flex p-3 ring-4 ring-white ${service.highlight ? 'bg-royal-600 shadow-lg shadow-royal-200' : 'bg-royal-400'}`}>
+                <span className={`rounded-lg inline-flex p-3 ring-4 ring-white transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 ${service.highlight ? 'bg-royal-600 shadow-lg shadow-royal-200' : 'bg-royal-400'}`}>
                   {service.icon}
                 </span>
               </div>
