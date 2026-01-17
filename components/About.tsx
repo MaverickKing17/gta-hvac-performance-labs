@@ -9,7 +9,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="aspect-w-3 aspect-h-2 rounded-2xl overflow-hidden shadow-2xl bg-royal-900">
                <img 
-                src="https://i.ibb.co/FqB4n8vr/hunyuan-image-3-0-b-Replace-the-current-2.png" 
+                src="https://i.ibb.co/C3ry0qvD/gemini-3-pro-image-preview-2k-a-A-professional-high.png" 
                 alt="Dr HVAC Team" 
                 className="object-cover w-full h-full"
               />
