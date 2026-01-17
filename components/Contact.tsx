@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
                                     id="name"
                                     name="name"
                                     required
-                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors"
+                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors text-gray-900"
                                     placeholder="Your Name"
                                     value={formData.name}
                                     onChange={e => setFormData({...formData, name: e.target.value})}
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                                     id="phone"
                                     name="phone"
                                     required
-                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors"
+                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors text-gray-900"
                                     placeholder="(905) 555-0123"
                                     value={formData.phone}
                                     onChange={e => setFormData({...formData, phone: e.target.value})}
@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                                     name="message"
                                     rows={3}
                                     required
-                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors"
+                                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-royal-500 focus:ring-royal-500 border p-3 bg-gray-50 focus:bg-white transition-colors text-gray-900"
                                     placeholder="Describe your issue..."
                                     value={formData.message}
                                     onChange={e => setFormData({...formData, message: e.target.value})}
