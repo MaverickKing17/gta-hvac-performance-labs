@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                              </div>
                              <div>
                                 <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">Email</p>
-                                <a href="mailto:brendon@drhvac-brampton.com" className="text-lg text-gray-600 hover:text-royal-600 transition-colors">brendon@drhvac-brampton.com</a>
+                                <a href="mailto:b.aldridge@drhvac.ca" className="text-lg text-gray-600 hover:text-royal-600 transition-colors">b.aldridge@drhvac.ca</a>
                              </div>
                         </div>
                         

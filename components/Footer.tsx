@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
             <h3 className="text-sm font-semibold text-royal-200 tracking-wider uppercase mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><a href="tel:+19055550123" className="hover:text-white transition-colors">Phone: (905) 555-0123</a></li>
-              <li><a href="mailto:brendon@drhvac-brampton.com" className="hover:text-white transition-colors">Email: brendon@drhvac-brampton.com</a></li>
+              <li><a href="mailto:b.aldridge@drhvac.ca" className="hover:text-white transition-colors">Email: b.aldridge@drhvac.ca</a></li>
               <li>Brampton, ON</li>
             </ul>
           </div>
