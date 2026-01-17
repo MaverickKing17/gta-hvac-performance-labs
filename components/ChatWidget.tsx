@@ -91,7 +91,7 @@ const ChatWidget: React.FC = () => {
 
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-royal-600 hover:bg-royal-700 text-white p-4 rounded-full shadow-lg shadow-royal-200 transition-all hover:scale-110"
+        className="bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-full shadow-lg shadow-orange-200/50 transition-all hover:scale-110"
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
       </button>

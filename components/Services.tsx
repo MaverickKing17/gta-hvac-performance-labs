@@ -55,7 +55,7 @@ const Services: React.FC = () => {
               </div>
               <div className="mt-8">
                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-royal-600 transition-colors">
-                  <a href="#" className="focus:outline-none">
+                  <a href="#contact" className="focus:outline-none">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {service.title}
                   </a>
