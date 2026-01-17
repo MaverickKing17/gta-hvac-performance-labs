@@ -12,7 +12,7 @@ const App: React.FC = () => {
   // Application State managed at top level
   const [headline, setHeadline] = useState('Brampton’s Trusted Heating Doctors – Keeping Your Home Healthy and Warm.');
   const [subheadline] = useState('Fast, Professional Diagnosis & Repair.');
-  const [heroImage, setHeroImage] = useState<string | null>('https://i.ibb.co/PZDsc82k/gemini-3-pro-image-preview-2k-a-Replace-the-current.png');
+  const [heroImage, setHeroImage] = useState<string | null>('https://i.ibb.co/FqB4n8vr/hunyuan-image-3-0-b-Replace-the-current-2.png');
 
   const handleHeroUpdate = (data: { headline?: string; image?: string }) => {
     if (data.headline) setHeadline(data.headline);

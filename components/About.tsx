@@ -8,17 +8,12 @@ const About: React.FC = () => {
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="relative">
             <div className="aspect-w-3 aspect-h-2 rounded-2xl overflow-hidden shadow-2xl bg-royal-900">
-               {/* Placeholder for Brendon */}
                <img 
-                src="https://picsum.photos/600/400?grayscale" 
-                alt="Brendon, Owner of Dr HVAC" 
-                className="object-cover w-full h-full mix-blend-overlay opacity-80"
+                src="https://i.ibb.co/FqB4n8vr/hunyuan-image-3-0-b-Replace-the-current-2.png" 
+                alt="Dr HVAC Team" 
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-royal-900 via-transparent to-transparent opacity-90"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-2xl font-bold">Brendon</p>
-                <p className="text-royal-200">Owner & Lead Technician</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-royal-900 via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
           
